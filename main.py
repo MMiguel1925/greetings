@@ -1,5 +1,7 @@
 # This is a sample Python script.
 from greets import greetings
+from translate import Translator
+
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
@@ -13,10 +15,11 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
+translator = Translator(to_lang='pt')
 x = 0
 for g in greetings:
     x += 1
-    print(f'{x}: {g.title()}')
+    print(f'{x}: {translator.translate(g).title()}')
 
 
 
